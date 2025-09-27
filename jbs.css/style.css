@@ -1,0 +1,245 @@
+/* RESET E TIPOGRAFIA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+nav button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #C8102E;
+  background: #C8102E;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav button:hover {
+  background: #A50B23;
+  border-color: #A50B23;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+  color: #C8102E;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+/* FORMULÁRIOS */
+form {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 14px;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+  outline: none;
+  border-color: #C8102E;
+  box-shadow: 0 0 3px rgba(200,16,46,0.4);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+}
+
+/* BOTÕES */
+form button {
+  padding: 6px 12px;           
+  border-radius: 4px;
+  border: 1px solid #C8102E;
+  background: #C8102E;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 6px;
+  font-size: 13px;
+}
+
+form button:hover {
+  background: #A50B23;
+  border-color: #A50B23;
+}
+
+form button.danger {
+  background: #6c757d;        
+  border: 1px solid #6c757d;
+}
+
+form button.danger:hover {
+  background: #5a6268;
+  border-color: #5a6268;
+}
+
+/* TABELAS */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 13px;
+}
+
+table th {
+  background: #C8102E;
+  color: white;
+  font-weight: 600;
+}
+
+table tr:hover {
+  background: #f1f3f5;
+}
+
+td[contenteditable="true"] {
+  background: #fdf2f2;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+/* SEARCH */
+.search {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.search input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+.search button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #C8102E;
+  background: #C8102E;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 13px;
+}
+
+.search button:hover {
+  background: #A50B23;
+  border-color: #A50B23;
+}
+
+/* CARDS */
+.card {
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-size: 13px;
+}
+
+/* RÉGUA DE STATUS */
+.steps {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.step .bubble {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  line-height: 24px;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 4px;
+  font-size: 11px;
+}
+
+.step.done .bubble {
+  background: #28a745;
+}
+
+.step.active .bubble {
+  background: #C8102E;
+}
+
+.step.pending .bubble {
+  background: #6c757d;
+}
+
+.step .label {
+  font-size: 11px;
+  color: #495057;
+  word-wrap: break-word;
+}
+
+.connector {
+  height: 3px;
+  background: #ccc;
+  flex: 1;
+  margin: 0 3px;
+  border-radius: 2px;
+}
+
+.step.done + .connector {
+  background: #28a745;
+}

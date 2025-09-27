@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário do Pix</title>
+   <link rel="stylesheet" href="jbs.css/pix.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Formulário do Pix</h2>
+    <form id="pixForm" autocomplete="off">
+      <!-- Campos do formulário -->
+      <label for="assistenteAnterior">Assistente:</label>
+      <select id="assistenteAnterior" name="assistenteAnterior">
+        <option value="">Selecione</option>
+
+          <option value="Alexandre Jandrey">Jandrey</option>
+          <option value="Bianca Batista">Bianca Batista</option>
+          <option value="Daniel Vaz">Daniel Vaz</option>
+          <option value="Diogenes Inacio">Diogenes Inacio</option>
+          <option value="Eliezer Kuzniewski">Eliezer Kuzniewski</option>
+          <option value="Elton Mello">Elton Mello</option>
+          <option value="Fabio Silva">Fabio Silva</option>
+          <option value="Guilherme Schulz">Guilherme Schulz</option>
+          <option value="Joniel Hansen">Joniel Hansen</option>
+          <option value="Lucas Carvalho">Lucas Carvalho</option>
+          <option value="Lucas Pinheiro">Lucas Pinheiro</option>
+          <option value="Marcos Paredi">Marcos Paredi</option>
+          <option value="Michele Passos">Michele Passos</option>
+          <option value="Paulo Ribeiro">Paulo Ribeiro</option>
+          <option value="Ramon Barreto">Ramon Barreto</option>
+          <option value="Roger Silva">Roger Silva</option>
+        </select>
+      </select>
+
+      <label for="saudacao">Saudação:</label>
+      <select id="saudacao" name="saudacao">
+        <option value="">Selecione</option>
+        <option value="Bom dia, tudo bem?">Bom dia, tudo bem?</option>
+        <option value="Boa tarde, tudo bem?">Boa tarde, tudo bem?</option>
+        <option value="Boa noite, tudo bem?">Boa noite, tudo bem?</option>
+      </select>
+
+      <label for="servicoRealizado">Serviço Realizado:</label>
+      <textarea id="servicoRealizado" name="servicoRealizado" rows="2" placeholder="Descreva o serviço realizado"></textarea>
+
+      <label for="valorServico">Valor do Serviço:</label>
+      <input type="text" name="valorServico" id="valorServico" oninput="formatarMoeda(this)" placeholder="R$ 0,00">
+
+      <label>Chave Pix:</label>
+      <div class="row-inline">
+        <select id="tipoChave" name="tipoChave">
+          <option value="CPF">CPF</option>
+          <option value="CNPJ">CNPJ</option>
+          <option value="E-mail">E-mail</option>
+          <option value="Celular">Celular</option>
+        </select>
+        <input type="text" id="chavePix" name="chavePix" placeholder="Digite a chave">
+      </div>
+
+      <label for="nomeDestino">Nome do Destino:</label>
+      <input type="text" id="nomeDestino" name="nomeDestino">
+
+      <label for="bancoDestino">Banco do Destino:</label>
+      <input type="text" id="bancoDestino" name="bancoDestino">
+
+      <label for="protocolo">Protocolo:</label>
+      <input type="text" id="protocolo" name="protocolo">
+
+      <label for="placa">Placa:</label>
+      <input type="text" id="placa" name="placa">
+
+      <label for="cliente">Cliente:</label>
+      <input list="clientes" id="cliente" name="cliente" placeholder="Selecione ou digite o cliente">
+      <datalist id="clientes">
+          <option value="60905 - JBS">
+          <option value="158555 - PEPSICO">
+          <option value="182803 - TELEFONICA">
+          <option value="207779 - UBERLANDIA">
+          <option value="229456 - FADEL">
+          <option value="233904 - AMBIPAR">
+          <option value="227034 - AMBIPAR">
+          <option value="233898 - GOV">
+          <option value="179499 - ENEL CE">
+          <option value="190963 - ENEL SP">
+          <option value="229895 - SOUZA CRUZ">
+          <option value="159656 - RIACHUELO">
+          <option value="194151 - RIACHUELO">
+          <option value="242531 - ECOPOWER">
+          <option value="239517 - LOCALIZA">
+          <option value="248071 - SABESP">
+          <option value="247573 - CONLOG">
+          <option value="240125 - TIXLOG">
+      </datalist>
+
+      <div class="buttons">
+        <button type="button" onclick="imprimirPix()">Imprimir Informações</button>
+        <button type="button" onclick="limparPix()">Limpar Dados</button>
+        <a href="index.html"><button type="button">Voltar</button></a>
+      </div>
+    </form>
+    <div class="output" id="pixOutput"></div>
+  <div id="botaoCopiar" style="text-align: center; margin-top: 10px; display: none;">
+  <button type="button" onclick="copiarDados()">Copiar Dados Gerados</button>
+</div>
+  </div>
+
+<SCript src="jbs.js/pix.js"></SCript>
+</body>
+</html>

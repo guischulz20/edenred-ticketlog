@@ -1,0 +1,194 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 40px 10px;
+    background: linear-gradient(135deg, #ff4e50, #760d0d, #b71c1c);
+    background-size: 300px;
+    background-attachment: fixed;
+    background-blend-mode: lighten;
+}
+
+.logo-fixed {
+    position: fixed;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    z-index: 0; /* alterado para ficar atrás do conteúdo */
+    opacity: 1; /* opcional: deixa o logo semi-transparente */
+}
+
+.logo-fixed img {
+    height: 230px;
+}
+
+.regua-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.regua-links button {
+    background-color: #ffffff;
+    color: #c62828;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.regua-links button:hover {
+    background-color: #ffffff;
+    color: #b71c1c;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    position: relative; /* necessário para o z-index funcionar */
+    z-index: 10; /* garante que fique acima do logo */
+}
+
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative; /* necessário para o z-index funcionar */
+    z-index: 10; /* garante que fique acima do logo */
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #c62828;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #c62828;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+.hidden {
+    display: none;
+}
+
+.output {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff3e0;
+    padding: 25px;
+    border-radius: 12px;
+    color: #4e342e;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.output h3 {
+    margin-top: 0;
+    color: #bf360c;
+}
+
+#copiarBtn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #616161;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#copiarBtn:hover {
+    background-color: #424242;
+}
+
+.telefone-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.telefone-row select,
+.telefone-row input[type="tel"] {
+    margin: 0;
+    width: auto;
+    flex: 1 1 0;
+}
+
+.telefone-row label {
+    margin-bottom: 0;
+    min-width: 80px;
+}
+
+.visualizacao-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.visualizacao-logo img {
+    height: 40px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .logo-fixed {
+        height: 80px; /* diminui o logo */
+        top: 10px; /* posiciona no topo */
+        left: 10px;
+        transform: none;
+        z-index: 0; /* continua atrás do conteúdo */
+    }
+}
+
+
+
+

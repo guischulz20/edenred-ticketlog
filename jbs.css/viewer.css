@@ -1,0 +1,153 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+background: linear-gradient(135deg, #ff4e50, #760d0d, #b71c1c);
+    background-size: 300px;
+
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.search input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 90%;
+}
+
+.search button {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c62828;
+  background-color: #fff;
+  border: 2px solid #c62828;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #c62828;
+  color: #fff;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.actions {
+  margin-bottom: 20px;
+}
+
+.actions button {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1976d2;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #1565c0;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  text-align: center;
+}
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.step.done .bubble {
+  background-color: #4caf50;
+}
+
+.step.active .bubble {
+  background-color: #ff9800;
+}
+
+.step.pending .bubble {
+  background-color: #e0e0e0;
+}
+
+.connector {
+  width: 12px;
+  height: 2px;
+  background-color: #aaa;
+  align-self: center;
+}
+button {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 6px;
+      background: #5c0202;
+      color: #fff;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+

@@ -1,0 +1,268 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff4e50, #760d0d, #b71c1c);
+    background-size: 300px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* ====== NAV ====== */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+nav button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+/* ====== TITULOS ====== */
+h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+/* ====== AREA DE BUSCA ====== */
+.search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 800px; /* menor que antes */
+}
+
+.search input {
+  flex: 2; /* ocupa menos espaço */
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search button {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #480201;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.search button:hover {
+  background: #c62828;
+}
+
+/* ====== FORM ====== */
+form {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 80%;  /* ocupa menos espaço */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+form input,
+form select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 15px;
+  background: #fafafa;
+  transition: border 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border: 1px solid #e53935;
+  outline: none;
+}
+
+/* Botões do formulário */
+form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button[type="submit"] {
+  background: #43a047;
+  color: #fff;
+}
+
+form button[type="submit"]:hover {
+  background: #2e7d32;
+}
+
+form button.danger {
+  background: #e53935;
+  color: #fff;
+}
+
+form button.danger:hover {
+  background: #c62828;
+}
+
+/* ====== LISTA DE CHAMADOS ====== */
+#listaChamados {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 80%; /* acompanha largura do formulário */
+  color: #333;
+}
+
+#listaChamados .chamado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+#listaChamados .chamado:last-child {
+  border-bottom: none;
+}
+
+/* ====== BOTÕES GERAR LINK & EXCLUIR ====== */
+#listaChamados button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 6px;
+}
+
+/* Botão Gerar Link */
+#listaChamados .btn-link {
+  background: #1976d2;
+  color: #fff;
+}
+
+#listaChamados .btn-link:hover {
+  background: #0d47a1;
+}
+
+/* Botão Excluir */
+#listaChamados .btn-excluir {
+  background: #e53935;
+  color: #fff;
+}
+
+#listaChamados .btn-excluir:hover {
+  background: #c62828;
+}
+
+/* ====== RÉGUA (para impressão/visualização) ====== */
+.regua {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; /* Alinha os botões à direita */
+  align-items: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+/* Se quiser centralizar os botões, troque por: justify-content: center; */
+
+.regua button {
+  flex: none;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #710303;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ece5e5;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.regua button:hover {
+  background: #e53935;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.regua button.active {
+  background: #43a047;
+  color: #fff;
+}
+
+.regua select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.regua select:focus {
+  border-color: #e53935;
+}
+
+
+.card {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 3px solid #090808;
+  border-radius: 10px;
+  background: #ded0d0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ✅ Espaço acima dos botões */
+.card > div:last-child {
+  margin-top: 12px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Acompanhamento</title>
+  <link rel="stylesheet" href="jbs.css/admin.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html"><button onclick="window.location.reload()">Home</button></a> 
+  <button onclick="window.open('viewer.html','_blank')">Visualização</button>
+</nav>
+
+<h1>Chamados</h1>
+
+<div class="search">
+  <input type="text" id="searchAdmin" placeholder="Pesquisar por placa ou protocolo">
+  <button onclick="filtrarChamados()">Pesquisar</button>
+  <button onclick="mostrarTodos()">Mostrar Todos</button>
+</div>
+
+<form onsubmit="event.preventDefault(); adicionarChamado();">
+  <label for="protocolo">Chamado / Protocolo</label>
+  <input type="text" id="protocolo" placeholder="Digite o protocolo">
+
+  <label for="placa">Placa</label>
+  <input type="text" id="placa" placeholder="Digite a placa">
+
+  <label for="status">Status Inicial</label>
+  <select id="status">
+    <option value="0">Emitido protocolo</option>
+    <option value="1">Em atendimento</option>
+    <option value="2">Contato com o motorista</option>
+    <option value="3">Procurando prestador</option>
+    <option value="4">Prestador encontrado</option>
+    <option value="5">Solicitando acordo</option>
+    <option value="6">Prestador em rota</option>
+    <option value="7">Prestador no local</option>
+    <option value="8">Prestador finalizando</option>
+    <option value="9">Serviço finalizado</option>
+  </select>
+
+  <button type="submit">Salvar</button>
+  <button type="button" class="danger" onclick="limparForm()">Limpar</button>
+</form>
+
+<div id="listaChamados"></div>
+
+<script src="jbs.js/script-admin.js" > </script>
+
+</body>
+</html>

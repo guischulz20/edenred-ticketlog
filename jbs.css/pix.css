@@ -1,0 +1,119 @@
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px 10px;
+      background: linear-gradient(135deg, #ff4e50, #c62828, #b71c1c);
+      background-size: 300px;
+      background-attachment: fixed;
+      background-blend-mode: lighten;
+    }
+
+    .container {
+      max-width: 550px;
+      margin: 40px auto;
+      background: #ffffffcc;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+      padding: 32px 28px 28px 28px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #b71c1c;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #b71c1c;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    select, input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #ef9a9a;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+
+    select:focus, input:focus, textarea:focus {
+      outline: none;
+      border-color: #c62828;
+      box-shadow: 0 0 0 2px #ffcdd2;
+    }
+
+    .row-inline {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .row-inline select {
+      width: 35%;
+    }
+
+    .row-inline input {
+      width: 65%;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 6px;
+      background: #d32f2f;
+      color: #fff;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #b71c1c;
+    }
+
+    .output {
+      background: #ffebee;
+      color: #b71c1c;
+      border-radius: 8px;
+      margin-top: 30px;
+      padding: 18px 16px;
+      font-size: 16px;
+      word-break: break-word;
+      display: none;
+    }
+
+    .output strong {
+      color: #d32f2f;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 16px;
+      }
+
+      .row-inline {
+        flex-direction: column;
+      }
+
+      .row-inline select,
+      .row-inline input {
+        width: 100%;
+      }
+    }
+ 

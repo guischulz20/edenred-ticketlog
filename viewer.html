@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visualização Geral</title>
+<link rel="stylesheet" href="jbs.css/viewer.css">
+</head>
+<body>
+
+<a href="index.html"><button onclick="window.location.reload()">Home</button></a> 
+
+<h1>Visualização de Protocolos</h1>
+
+<div class="search">
+  <input type="text" id="searchViewer" placeholder="Pesquisar por placa ou protocolo">
+  <button onclick="filtrarViewer()">Pesquisar</button>
+  <button onclick="mostrarTodosViewer()">Mostrar Todos</button>
+</div>
+
+<div id="listaViewer"></div>
+
+
+<script src="jbs.js/script-viewer.js"></script>
+
+</body>
+
+</html>

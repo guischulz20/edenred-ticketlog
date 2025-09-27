@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Formulário de Socorro</title>
+<link rel="stylesheet" href="jbs.css/jbs.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<div class="logo-fixed">
+    <img src="img/logo 1.png" alt="Ticket Log Time Socorro">
+</div>
+
+<div class="regua-links">
+    <a href="https://www.goodmanager.com.br/autenticacao/?urlretorno=/goodmanagerssl/FuelControl/AcessoModuloManutencao.cfm&skin=goodmanagerssl" target="_blank"><button type="button">Sou Log</button></a>
+    <a href="https://login.mypurecloud.com/#/authenticate" target="_blank"><button type="button">Genesys</button></a>
+    <a href="https://platform.senior.com.br/login/?redirectTo=https%3A%2F%2Fplatform.senior.com.br&tenant=edenred.com" target="_blank"><button type="button">Senior</button></a>
+    <a href="https://web.whatsapp.com/" target="_blank"><button type="button">WhatsApp</button></a>
+    <a href="https://apps.cadeguincho.com/CadeGuincho/admin/Autenticacao/Login"><button>Cade Guincho</button></a>
+    <a href="pix.html"><button type="button">PIX</button></a>
+
+    <a href="admin.html" target="_blank"><button type="button">Acompanhamento</button></a>
+    <a href="viewer.html" target="_blank"><button type="button">Status</button></a>
+
+</div>
+
+<h2>Formulário de Socorro</h2>
+<div class="content">
+<form id="socorroForm">
+  <div>
+    <label>Nome do Assistente:</label>
+    <input list="assistentes" name="assistente" placeholder="Digite ou selecione o assistente" required>
+    <datalist id="assistentes">
+      <option value="Jandrey">
+      <option value="Bianca Batista">
+      <option value="Daniel Vaz">
+      <option value="Diogenes Inacio">
+      <option value="Eliezer Kuzniewski">
+      <option value="Elton Mello">
+      <option value="Fabio Silva">
+      <option value="Guilherme Schulz">
+      <option value="Joniel Hansen">
+      <option value="Lucas Carvalho">
+      <option value="Lucas Pinheiro">
+      <option value="Marcos Paredi">
+      <option value="Michele Passos">
+      <option value="Paulo Ribeiro">
+      <option value="Ramon Barreto">
+      <option value="Roger Silva">
+    </datalist>
+  </div>
+
+  <div>
+    <label>Número de Protocolo:</label>
+    <input type="text" name="protocolo" required>
+  </div>
+
+  <div>
+    <label>Cliente:</label>
+    <input list="clientes" name="cliente" placeholder="Selecione ou digite o cliente">
+    <datalist id="clientes">
+      <option value="60905 - JBS">
+      <option value="158555 - PEPSICO">
+      <option value="182803 - TELEFONICA">
+      <option value="207779 - UBERLANDIA">
+      <option value="229456 - FADEL">
+      <option value="233904 - AMBIPAR">
+      <option value="227034 - AMBIPAR">
+      <option value="233898 - GOV">
+      <option value="179499 - ENEL CE">
+      <option value="190963 - ENEL SP">
+      <option value="229895 - SOUZA CRUZ">
+      <option value="159656 - RIACHUELO">
+      <option value="194151 - RIACHUELO">
+      <option value="242531 - ECOPOWER">
+      <option value="239517 - LOCALIZA">
+      <option value="248071 - SABESP">
+      <option value="247573 - CONLOG">
+      <option value="240125 - TIXLOG">
+    </datalist>
+  </div>
+
+  <div>
+    <label>Placa do Veículo:</label>
+    <input type="text" name="placa" required>
+  </div>
+
+  <div>
+    <label>Cidade do SOS:</label>
+    <input type="text" name="cidade" required>
+  </div>
+
+  <div>
+    <label>Prestador:</label>
+    <select name="tipoPrestador" onchange="togglePrestador(this.value)" required>
+      <option value="">Selecione</option>
+      <option value="credenciado">Credenciado</option>
+      <option value="terceiro">Terceiro</option>
+    </select>
+  </div>
+
+  <div id="campoCredenciado">
+    <label>Nome do EC:</label>
+    <input type="text" name="nomeEC" required>
+  </div>
+
+  <div id="campoTerceiro" class="hidden">
+    <label>Prestador Terceiro:</label>
+    <input type="text" name="prestadorTerceiro">
+  </div>
+
+  <div>
+    <label>Cidade do Prestador:</label>
+    <input type="text" name="cidadePrestador" required>
+  </div>
+
+  <div>
+    <label>Segmento:</label>
+    <input list="segmentos" name="segmento" placeholder="Selecione ou digite o segmento">
+    <datalist id="segmentos">
+      <option value="Boiadeiro">
+      <option value="Couro Verde">
+      <option value="Container Friboi">
+      <option value="Container Seara">
+      <option value="Seara Agro">
+      <option value="Genu-in">
+      <option value="Figorifico"></option>
+    </datalist>
+  </div>
+
+  <div>
+    <label>Regional:</label>
+    <select name="regional">
+      <option value="">Selecione</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+
+  <div class="telefone-row">
+    <label>Telefone:</label>
+    <select name="tipoTelefone" id="tipoTelefone">
+      <option value="condutor">Condutor</option>
+      <option value="fornecedor">Fornecedor</option>
+    </select>
+    <input type="tel" name="telefoneSelecionado" id="telefoneSelecionado" placeholder="Digite o número">
+  </div>
+
+  <div>
+    <label>Valor por KM:</label>
+    <input type="text" name="valorKM" id="valorKM" oninput="formatarMoeda(this)" placeholder="R$ 0,00" required>
+  </div>
+
+  <div>
+    <label>Valor de Saída:</label>
+    <input type="text" name="valorSaida" id="valorSaida" oninput="formatarMoeda(this)" placeholder="R$ 0,00" required>
+  </div>
+
+  <div>
+    <label>Quantidade de KM:</label>
+    <input type="number" name="quantidadeKM" required>
+  </div>
+
+  <div>
+    <label>Valor do Serviço:</label>
+    <input type="text" name="valorServico" id="valorServico" oninput="formatarMoeda(this)" placeholder="R$ 0,00">
+  </div>
+
+  <div>
+    <label>De acordo?</label>
+    <input list="nomesFrequentes" id="nomeDeAcordo" placeholder="Digite ou selecione" style="width: 100%;">
+    <datalist id="nomesFrequentes">
+      <option value="Cleiton">
+      <option value="Lúcio">
+    </datalist>
+    <select id="deAcordoSelect" style="margin-top: 5px; width: 100%;">
+      <option value="">Selecione</option>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Início do sos:</label>
+    <input type="datetime-local" name="dataInicio" required>
+  </div>
+
+  <div>
+    <label>Fim do sos:</label>
+    <input type="datetime-local" name="dataFim" required>
+  </div>
+
+  <div class="full-width">
+    <label>Serviço Realizado:</label>
+    <textarea name="servicoRealizado" rows="3" placeholder="Descreva o serviço realizado"></textarea>
+  </div>
+
+  <div class="full-width">
+    <button type="button" onclick="gerarVisualizacao('Prévia do Socorro')">Prévia</button>
+    <button type="button" onclick="gerarVisualizacao('Finalização do Socorro')">Finalizar Socorro</button>
+    <button type="button" onclick="gerarVisualizacao('De acordo?')">De acordo</button>
+    <button type="button" onclick="gerarPDF()">Resumo (PDF)</button>
+    <button type="button" onclick="limparCampos()" style="background-color:#616161;">Limpar Campos</button>
+  </div>
+</form>
+
+<div id="visualizacao" class="output"></div>
+<button id="copiarBtn" onclick="copiarVisualizacao()">Copiar</button>
+</div>
+
+<script src="jbs.js/jbs.js"></script>
+</body>
+</html>
+
