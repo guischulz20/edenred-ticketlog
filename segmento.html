@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Matriz de Comunicação</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: repeating-linear-gradient(
+        90deg,
+        #a00000,
+        #a00000 150px,
+        #c93030 150px,
+        #c93030 300px
+      );
+    }
+
+    /* CONTAINER */
+    .container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      width: 600px;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    /* BOTÕES PADRÃO */
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      border: none;
+    }
+
+    .btn-home {
+      background: #6c757d;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .btn-home:hover {
+      background: #5a6268;
+    }
+
+    /* FORM */
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    select:focus {
+      border-color: #a00000;
+    }
+
+    /* INFO BOX */
+    .info-box {
+      text-align: left;
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .info-box p {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #a00000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="btn btn-home">Home</a>
+    <h2>Matriz de Comunicação</h2>
+
+    <label for="segmento">Selecione um segmento:</label>
+    <select id="segmento">
+      <option value="">-- Escolha --</option>
+      <option value="Boiadeiro REG01">Boiadeiro REG01</option>
+      <option value="Boiadeiro REG02">Boiadeiro REG02</option>
+      <option value="Boiadeiro REG03">Boiadeiro REG03</option>
+      <option value="Boiadeiro REG04">Boiadeiro REG04</option>
+      <option value="Couro Verde REG02">Couro Verde REG02 (exceto BAR)</option>
+      <option value="Couro Verde REG03">Couro Verde REG03</option>
+      <option value="Couro Verde REG04">Couro Verde REG04</option>
+      <option value="Couro Verde REG05">Couro Verde REG05</option>
+      <option value="Container FRIBOI">Container FRIBOI</option>
+      <option value="Container SEARA REG01">Container SEARA REG01</option>
+      <option value="Container SEARA REG02">Container SEARA REG02</option>
+      <option value="Container SEARA REG03">Container SEARA REG03</option>
+      <option value="Container SEARA REG05">Container SEARA REG05</option>
+      <option value="Seara AGRO REG02">Seara AGRO REG02</option>
+      <option value="Genu-IN">Genu-IN (toda)</option>
+      <option value="VENDA E MANUTENÇÃO">VENDA E MANUTENÇÃO</option>
+      <option value="Todas Bases">Todas Bases</option>
+      <option value="Faturamento1">Faturamento (Elaine)</option>
+      <option value="Faturamento2">Faturamento (Stefani)</option>
+      <option value="Compras">Compras</option>
+      <option value="Pneus">Pneus</option>
+      <option value="Controller">Controller</option>
+      <option value="Analista principal">Analista principal</option>
+    </select>
+
+    <div id="info" class="info-box">
+      <p>Selecione um segmento acima para ver os dados.</p>
+    </div>
+  </div>
+
+  <script>
+    const dados = {
+      "Boiadeiro REG01": { supervisor: "Diogo Gualtieri", email: "diogo.gualtieri@jbs.com.br", telefone: "(18) 99686-3601", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Boiadeiro REG02": { supervisor: "Osmar Vicente Dias Junior", email: "osmar.dias@jbs.com.br", telefone: "(62) 99192-8018", coordenador: "Cleiton Paulo Borges", coordEmail: "cleiton.borges@jbs.com.br", coordTelefone: "(11) 96373-3578" },
+      "Boiadeiro REG03": { supervisor: "Wanderson Nelson", email: "", telefone: "(65) 9 9640-3203", coordenador: "Cleiton Paulo Borges", coordEmail: "cleiton.borges@jbs.com.br", coordTelefone: "(11) 96373-3578" },
+      "Boiadeiro REG04": { supervisor: "Leandro Cunha", email: "leandro.cunha@jbs.com.br", telefone: "(66) 99631-2348", coordenador: "Cleiton Paulo Borges", coordEmail: "cleiton.borges@jbs.com.br", coordTelefone: "(11) 96373-3578" },
+      "Couro Verde REG02": { supervisor: "Osmar Vicente Dias Junior", email: "osmar.dias@jbs.com.br", telefone: "(62) 99192-8018", coordenador: "Cleiton Paulo Borges", coordEmail: "cleiton.borges@jbs.com.br", coordTelefone: "(11) 96373-3578" },
+      "Couro Verde REG03": { supervisor: "Alexandre dos Santos", email: "alexandre.santos1@jbs.com.br", telefone: "(65) 99640-3203", coordenador: "Cleiton Paulo Borges", coordEmail: "cleiton.borges@jbs.com.br", coordTelefone: "(11) 96373-3578" },
+      "Couro Verde REG04": { supervisor: "Diogo Gualtieri", email: "diogo.gualtieri@jbs.com.br", telefone: "(18) 99686-3601", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Couro Verde REG05": { supervisor: "***", email: "***", telefone: "***",  coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Container FRIBOI": { supervisor: "Josivaldo Bastos de Oliveira", email: "josivaldo.oliveira@jbs.com.br", telefone: "(13) 99128-5766",  coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Container SEARA REG01": { supervisor: "Matheus Moura", email: "matheus.ricardo@jbs.com.br", telefone: "(47) 98895-9021", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Container SEARA REG02": { supervisor: "Josivaldo Bastos de Oliveira", email: "josivaldo.oliveira@jbs.com.br", telefone: "(13) 99128-5766", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Container SEARA REG03": { supervisor: "Matheus Moura", email: "matheus.ricardo@jbs.com.br", telefone: "(47) 98895-9021", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Container SEARA REG05": { supervisor: "Matheus Moura", email: "matheus.ricardo@jbs.com.br", telefone: "(47) 98895-9021", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Seara AGRO REG02": { supervisor: "Matheus Moura", email: "matheus.ricardo@jbs.com.br", telefone: "(47) 98895-9021", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Genu-IN": { supervisor: "Diogo Gualtieri", email: "diogo.gualtieri@jbs.com.br", telefone: "(18) 99686-3601",  coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "VENDA E MANUTENÇÃO": { supervisor: "Moacir Vieira dos Santos", email: "moacir.santos@jbs.com.br", telefone: "(14) 99106-3389", coordenador: "Lucio de Freitas Silva", coordEmail: "lucio.silva@jbs.com.br", coordTelefone: "(65) 99323-9762" },
+      "Todas Bases": { supervisor: "Marcelllo Pierri da Silva", email: "marcello.silva@jbs.com.br", telefone: "(14) 99195-4101", coordenador: "", coordEmail: "", coordTelefone: "" },
+      "Faturamento1": { supervisor: "Elaine Cristina Ferrarezi", email: "elaine.ferrarezi@jbs.com.br", telefone: "(14) 3511-2723", coordenador: "", coordEmail: "", coordTelefone: "" },
+      "Faturamento2": { supervisor: "Stefani Gomes", email: "stefani.gomes@jbs.com.br", telefone: "(14) 3511-2723", coordenador: "", coordEmail: "", coordTelefone: "" },
+      "Compras": { supervisor: "Tamires Coutinho", email: "tamires.coutinho@jbs.com.br", telefone: "(14) 3511-4584", coordenador: "", coordEmail: "", coordTelefone: "" },
+      "Pneus": { supervisor: "Carlos Rafael do Valle", email: "carlos.rafael@jbs.com.br", telefone: "(14) 9916-0457", coordenador: "", coordEmail: "", coordTelefone: "" },
+      "Controller": { supervisor: "Henrique Pessoa", email: "henrique.pessoa@jbs.com.br", telefone: "(14) 99702-4637", coordenador: "", coordEmail: "", coordTelefone: "" },
+      "Analista principal": { supervisor: "Henrique Lourenço", email: "henrique.lourenco@jbs.com.br", telefone: "(14) 99829-9012", coordenador: "", coordEmail: "", coordTelefone: "" }
+    };
+
+    document.getElementById("segmento").addEventListener("change", function() {
+      const valor = this.value;
+      const infoDiv = document.getElementById("info");
+      
+      if (valor && dados[valor]) {
+        const d = dados[valor];
+        infoDiv.innerHTML = `
+          <p><span class="highlight">Supervisor:</span> ${d.supervisor}</p>
+          <p><span class="highlight">E-mail:</span> <a href="mailto:${d.email}">${d.email}</a></p>
+          <p><span class="highlight">Telefone:</span> ${d.telefone}</p>
+          <p><span class="highlight">Coordenador:</span> ${d.coordenador}</p>
+          <p><span class="highlight">E-mail Coordenador:</span> <a href="mailto:${d.coordEmail}">${d.coordEmail}</a></p>
+          <p><span class="highlight">Telefone Coordenador:</span> ${d.coordTelefone}</p>
+        `;
+      } else {
+        infoDiv.innerHTML = "<p>Selecione um segmento acima para ver os dados.</p>";
+      }
+    });
+  </script>
+</body>
+</html>
