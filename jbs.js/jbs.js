@@ -60,7 +60,7 @@ function gerarVisualizacao(titulo) {
     ];
 
     const camposPreenchidos = campos.filter(c => c[1] && c[1].trim() !== '');
-    let html = `<h3>${titulo}</h3><ul>`;
+    let html = `<h3>*${titulo}*</h3><ul>`;
     camposPreenchidos.forEach(c => {
         html += `<li><strong>${c[0]}:</strong> ${c[1]}</li>`;
     });
@@ -169,4 +169,5 @@ function limparCampos() {
     document.getElementById('campoCredenciado').classList.add('hidden');
     document.getElementById('campoTerceiro').classList.add('hidden');
 }
+
 
