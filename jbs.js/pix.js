@@ -21,16 +21,16 @@
       const cliente = form.cliente.value;
 
       let html = '';
-      if (saudacao) html += `<p>${saudacao}</p>`;
-      if (assistenteAnterior) html += `<p><strong>Assistente Anterior:</strong> ${assistenteAnterior}</p>`;
-      if (servicoRealizado) html += `<p><strong>Serviço Realizado:</strong> ${servicoRealizado}</p>`;
-      if (valorServico) html += `<p><strong>Valor do Serviço:</strong> ${valorServico}</p>`;
-      if (tipoChave && chavePix) html += `<p><strong>Chave Pix:</strong> ${tipoChave} - ${chavePix}</p>`;
-      if (nomeDestino) html += `<p><strong>Nome do Destino:</strong> ${nomeDestino}</p>`;
-      if (bancoDestino) html += `<p><strong>Banco do Destino:</strong> ${bancoDestino}</p>`;
-      if (protocolo) html += `<p><strong>Protocolo:</strong> ${protocolo}</p>`;
-      if (placa) html += `<p><strong>Placa:</strong> ${placa}</p>`;
-      if (cliente) html += `<p><strong>Cliente:</strong> ${cliente}</p>`;
+      if (saudacao) html += `<p>*${saudacao}*</p>`;
+      if (assistenteAnterior) html += `<p><strong>*Assistente Anterior:*</strong> ${assistenteAnterior}</p>`;
+      if (servicoRealizado) html += `<p><strong>*Serviço Realizado:*</strong> ${servicoRealizado}</p>`;
+      if (valorServico) html += `<p><strong>*Valor do Serviço:*</strong> ${valorServico}</p>`;
+      if (tipoChave && chavePix) html += `<p><strong>*Chave Pix:*</strong> ${tipoChave} - ${chavePix}</p>`;
+      if (nomeDestino) html += `<p><strong>*Nome do Destino:*</strong> ${nomeDestino}</p>`;
+      if (bancoDestino) html += `<p><strong>*Banco do Destino:*</strong> ${bancoDestino}</p>`;
+      if (protocolo) html += `<p><strong>*Protocolo:*</strong> ${protocolo}</p>`;
+      if (placa) html += `<p><strong>*Placa:*</strong> ${placa}</p>`;
+      if (cliente) html += `<p><strong>*Cliente:*</strong> ${cliente}</p>`;
 
       const output = document.getElementById('pixOutput');
       output.innerHTML = html || '<em>Nenhuma informação preenchida.</em>';
@@ -63,3 +63,4 @@
     });
 }
     
+
