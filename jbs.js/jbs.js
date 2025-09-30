@@ -171,3 +171,14 @@ function limparCampos() {
 }
 
 
+
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    function copiarVisualizacao() {
+      const conteudo = document.getElementById("visualizacao").innerText;
+      navigator.clipboard.writeText(conteudo).then(() => {
+        alert("Conteúdo copiado!");
+      });
+    }
