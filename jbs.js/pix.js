@@ -22,7 +22,7 @@
 
       let html = '';
       if (saudacao) html += `<p>*${saudacao}*</p>`;
-      if (assistenteAnterior) html += `<p><strong>*Assistente Anterior:*</strong> ${assistenteAnterior}</p>`;
+      if (assistenteAnterior) html += `<p><strong>*Assistente:*</strong> ${assistenteAnterior}</p>`;
       if (servicoRealizado) html += `<p><strong>*Serviço Realizado:*</strong> ${servicoRealizado}</p>`;
       if (valorServico) html += `<p><strong>*Valor do Serviço:*</strong> ${valorServico}</p>`;
       if (tipoChave && chavePix) html += `<p><strong>*Chave Pix:*</strong> ${tipoChave} - ${chavePix}</p>`;
@@ -63,4 +63,5 @@
     });
 }
     
+
 
